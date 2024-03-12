@@ -1,11 +1,11 @@
-function changeText(){
-     var textsArray = ["Krizza","Lou", "Isidro", "S222509548", "SIT725"]
-     var number = getRandomNumberBetween(0,textsArray.length - 1)
-     console.log("Index: ", number)
-     document.getElementById("heading").innerHTML = textsArray[number];
+function changeText() {
+     let potentialTexts = ['Krizza','Lou', 'Isidro', 'S222509548', 'SIT725'];
+     let randomNumber = getRandomNumber(0, potentialTexts.length - 1);
+     let textToChangeTo = potentialTexts[randomNumber];
+     document.getElementById('heading').innerHTML = textToChangeTo;
     }
     
-    function getRandomNumberBetween(min,max){
+    function getRandomNumber(min,max){
      return Math.floor(Math.random()*(max-min+1)+min);
     }
     
